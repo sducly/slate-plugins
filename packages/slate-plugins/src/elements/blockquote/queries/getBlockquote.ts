@@ -5,10 +5,6 @@ import { getParent } from '../../../common/queries/getParent';
 import { someNode } from '../../../common/queries/someNode';
 import { DEFAULTS_BLOCKQUOTE } from '../defaults';
 
-/**
- * If at (default = selection) is in table>tr>td, return table, tr, and td
- * node entries.
- */
 export const getBlockquote = (
     editor: Editor,
     { at = editor.selection }: { at?: Location | null } = {},

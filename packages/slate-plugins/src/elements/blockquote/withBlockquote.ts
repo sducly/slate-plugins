@@ -15,10 +15,6 @@ export const withBlockquote = ({ rules }: {rules: Array<Pick<AutoformatRule, 'ty
 ) => {
     const { insertText } = editor;
 
-    const isBlockQuoteElement = (element: Element | any): element is Element => {
-        return element?.type === ELEMENT_BLOCKQUOTE || false;
-    }
-
     editor.insertText = (text) => {
 
         const res = getBlockquote(editor, { at: editor.selection}) as NodeEntry<Ancestor>;
