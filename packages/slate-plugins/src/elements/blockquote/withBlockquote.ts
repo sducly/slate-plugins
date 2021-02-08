@@ -1,7 +1,6 @@
 import castArray from 'lodash/castArray';
-import { Editor, Element, Transforms, Path, NodeEntry, Ancestor } from 'slate';
-import { ELEMENT_BLOCKQUOTE, AutoformatRule } from '../..';
-import { getAbove, getChildren, getLastChildPath, getParent } from '../../common/queries';
+import { Editor, NodeEntry, Ancestor } from 'slate';
+import { AutoformatRule } from '../..';
 import { getBlockquote } from './queries/getBlockquote';
 import { insertBlockquoteItem } from './transforms/insertBlockquoteItem';
 
@@ -24,7 +23,6 @@ export const withBlockquote = ({ rules }: {rules: Array<Pick<AutoformatRule, 'ty
         for (const {
             type,
             markup,
-            preFormat,
             format,
         } of rules) {
 
