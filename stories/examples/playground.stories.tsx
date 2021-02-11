@@ -83,6 +83,7 @@ import {
   withMarks,
   withNormalizeTypes,
   withTable,
+  withBlockquote,
   withTrailingNode,
   withSelectOnBackspace,
 } from '@udecode/slate-plugins';
